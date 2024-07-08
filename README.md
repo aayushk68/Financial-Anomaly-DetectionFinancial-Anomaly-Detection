@@ -56,7 +56,7 @@ This project provides a complete solution for detecting anomalies in financial t
 For questions, feedback, or collaboration opportunities, feel free to contact me:
 
 - Email: aayushekhar6850@gmail.com
-- LinkedIn: [Aayush Kumar](www.linkedin.com/in/aayush-kumar-0a1b9921a)
+- LinkedIn: [Aayush Kumar](https://www.linkedin.com/in/aayush-kumar-0a1b9921a/)
 
 ## Example Code
 ### Example Code
