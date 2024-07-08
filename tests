@@ -1,0 +1,31 @@
+### Example Unit Tests
+
+```python
+import unittest
+import pandas as pd
+from your_module import load_and_preprocess_data, calculate_statistics, detect_anomalies
+
+class TestAnomalyDetection(unittest.TestCase):
+
+    def setUp(self):
+        # Set up test data
+        self.df = pd.DataFrame({
+            'type': ['A', 'A', 'B', 'B', 'A'],
+            'amount': [100, 150, 200, 250, 300]
+        })
+
+    def test_load_and_preprocess_data(self):
+        processed_data = load_and_preprocess_data(self.df)
+        self.assertTrue('amount' in processed_data.columns)
+
+    def test_calculate_statistics(self):
+        stats = calculate_statistics(self.df)
+        self.assertEqual(stats.loc['A', 'mean'], 183.33, "Mean calculation incorrect")
+
+    def test_detect_anomalies(self):
+        stats = calculate_statistics(self.df)
+        anomalies = detect_anomalies(self.df, stats)
+        self.assertEqual(len(anomalies), 1, "Unexpected number of anomalies detected")
+
+if __name__ == '__main__':
+    unittest.main()
