@@ -1,0 +1,6 @@
+### Testing
+
+To run the unit tests:
+
+```sh
+python -m unittest discover -s tests -p "*.py"
